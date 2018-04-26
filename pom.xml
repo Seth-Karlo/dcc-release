@@ -310,6 +310,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
   </build>
 
   <properties>
+    <git-commit-id-plugin.version>2.2.4</git-commit-id-plugin.version>
     <!-- Versions - DCC -->
     <dcc-common.version>4.3.11-20170112.215910-4</dcc-common.version>
 
