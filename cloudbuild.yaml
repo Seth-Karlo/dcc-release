@@ -1,0 +1,9 @@
+steps:
+- name: 'eu.gcr.io/$PROJECT_ID/hmf-icgc-image-builder:latest'
+  args: ['mvn', '-T', '1C', 'clean', 'package', '-DskipTests', '-am', '-pl', ':dcc-release-client']
+  id: mvn
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-f', 'dcc-release-client/Dockerfile', '-t', 'eu.gcr.io/$PROJECT_ID/$REPO_NAME-client:$TAG_NAME', '.']
+  waitFor: ['mvn']
+images: ['eu.gcr.io/$PROJECT_ID/$REPO_NAME-client']
+timeout: 2400s

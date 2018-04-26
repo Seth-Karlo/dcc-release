@@ -25,6 +25,6 @@ RUN \
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
-ADD target/dcc-release-client-5.1.2-SNAPSHOT.jar /opt/
-ADD dictionary.json.gz /opt/
-ADD codelists.json.gz /opt/
+ADD dcc-release-client/target/dcc-release-client-5.1.2-SNAPSHOT.jar /opt/
+ADD dcc-release-core/target/test-classes/fixtures/dictionary.json.gz /opt/
+ADD dcc-release-core/target/test-classes/fixtures/codelists.json.gz /opt/
